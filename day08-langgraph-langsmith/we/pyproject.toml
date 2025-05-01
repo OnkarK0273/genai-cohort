@@ -1,0 +1,13 @@
+[project]
+name = "we"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "langgraph>=0.4.1",
+    "langsmith>=0.3.39",
+    "openai>=1.76.2",
+    "pydantic>=2.11.4",
+    "python-dotenv>=1.1.0",
+]
