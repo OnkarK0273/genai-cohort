@@ -4,15 +4,17 @@ from langgraph.graph import graph,StateGraph, START,END
 from pydantic import BaseModel
 import os
 from typing_extensions import TypedDict
+from langsmith.wrappers import wrap_openai
+
 
 load_dotenv()
 
 api_key = os.environ.get("GEMINI_API_KEY")
 
-client = OpenAI(
+client = wrap_openai(OpenAI(
     api_key=api_key,
     base_url="https://generativelanguage.googleapis.com/v1beta/openai/"
-)
+))
 
 # llm schema
 
